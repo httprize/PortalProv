@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.css" />
+    <link rel="stylesheet" href="homeStyle.css">
+    <title>Home</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Portal Proveedores</a>
+        <div class="group">
+            <ul class="navigation">
+                <li> <a href="#">Ordenes</a></li>
+                <li> <a href="#">Facturas</a></li>
+                <li> <a href="#">Historial de pago</a></li>
+                <li> <a href="#">Cerrar Sesion</a></li>
+            </ul>
+        </div>
+        <ion-icon name="menu" class="menuToggle"></ion-icon>
+    </header>
+
+    <div class="conteiner-rfc">
+        <h1>RFC</h1>
+        <input type="text" class="rfclabel">
+    </div>
+
+    <div class="ord">
+        <h1>Ordenes disponibles</h1>
+    </div>
+<!--------------------Comienza la tabla---------------------------------->
+
+    <section class="data-table">
+        <table id="myTable" class="display">
+            <thead>
+                <tr>
+                    <th>Column 1</th>
+                    <th>Column 2</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Row 1 Data 1</td>
+                    <td>Row 1 Data 2</td>
+                </tr>
+                <tr>
+                    <td>Row 2 Data 1</td>
+                    <td>Row 2 Data 2</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <script>
+        var DataTable = require( 'datatables.net' );
+        require( 'datatables.net-responsive' );
+ 
+        let table = new DataTable('#myTable', {
+        responsive: true
+});
+    </script>
+
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.js"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+</body>
+</html>
